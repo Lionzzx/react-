@@ -1,23 +1,40 @@
 button {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .vertical-center-modal {
-    text-align: center;
-    white-space: nowrap;
+  text-align: center;
+  white-space: nowrap;
 
-    &::before {
-        content: '';
-        display: inline-block;
-        height: 100%;
-        width: 0;
-        vertical-align: middle;
-    }
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+  }
 
-    .ant-modal {
-        display: inline-block;
-        vertical-align: middle;
-        top: 0;
-        text-align: left;
-    }
+  .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+}
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.slider-wrap .ant-carousel .slick-slide {
+  height: 500px;
+  img {
+    width: 100%;
+  }
 }

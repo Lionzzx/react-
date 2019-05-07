@@ -1,18 +1,26 @@
 import React from "react";
-import { Tabs } from "antd";
+import {Button, Icon, Tabs } from "antd";
 import "./index.less";
 
 const TabPane = Tabs.TabPane;
 export default class Tab extends React.Component {
-  callback = () => {};
+  callback = (e) => {console.log(e)};
   render() {
     return (
       <div>
-        <Tabs defaultActiveKey="1" onChange={this.callback}>
-          <TabPane tab="Tab 1" key="1">
+        <Tabs type="card" tabBarExtraContent={<Button>Extra Action</Button>} defaultActiveKey="1" onChange={this.callback}>
+          <TabPane
+            tab={
+              <span>
+                <Icon type="apple" />
+                Tab 1
+              </span>
+            }
+            key="1"
+          >
             Content of Tab Pane 1
           </TabPane>
-          <TabPane tab="Tab 2" key="2">
+          <TabPane disabled tab="Tab 2" key="2">
             Content of Tab Pane 2
           </TabPane>
           <TabPane tab="Tab 3" key="3">
