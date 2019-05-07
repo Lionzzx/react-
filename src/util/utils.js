@@ -15,5 +15,20 @@ export default {
       ":" +
       date.getSeconds()
     );
+  },
+  pagination(data, callback) {
+    console.log(data);
+    return {
+      onChange: current => {
+        callback(current);
+      },
+      current: data.page,
+      pageSize: data.page_size,
+      total: data.total_count,
+      showTotal: () => {
+        return `共${data.total_count}条`;
+      },
+      showQuickJumper: true
+    };
   }
 };

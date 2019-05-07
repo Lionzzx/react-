@@ -176,7 +176,7 @@ class FormRegister extends React.Component {
             <FormItem {...offsetLayout}>
               {getFieldDecorator("userImg", {})(
                 <Checkbox>
-                  我已阅读过<a href="#">慕课协议</a>
+                  我已阅读过<a href="#home">慕课协议</a>
                 </Checkbox>
               )}
             </FormItem>

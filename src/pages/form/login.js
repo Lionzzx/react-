@@ -9,7 +9,6 @@ class FormLogin extends React.Component {
         message.success(`${userInfo.userName}恭喜你`);
       }
     });
-    console.log(userInfo);
   };
   render() {
     const { getFieldDecorator } = this.props.form;
@@ -81,7 +80,7 @@ class FormLogin extends React.Component {
                 initialValue: false,
                 valuePropName: "checked"
               })(<Checkbox>记住密码</Checkbox>)}
-              <a href="#">忘记密码</a>
+              <a href="#name">忘记密码</a>
             </Form.Item>
             <Form.Item>
               <Button onClick={this.handleSubmit} type="primary">
