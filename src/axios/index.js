@@ -16,22 +16,26 @@ export default class Axios {
         baseURL: BaseUrl,
         timeout: 5000,
         params: (options.data && options.data.params) || ""
-      }).then(resp => {
-        loading && (loading.style.display = "none");
-        if (resp.status === 200) {
-          let res = resp.data;
-          if (res.code === 0) {
-            resolve(res.result);
+      })
+        .then(resp => {
+          loading && (loading.style.display = "none");
+          if (resp.status === 200) {
+            let res = resp.data;
+            if (res.code === 0) {
+              resolve(res.result);
+            } else {
+              Modal.info({
+                title: "提示",
+                content: res.msg
+              });
+            }
           } else {
-            Modal.info({
-              title: "提示",
-              content: res.msg
-            });
+            reject(resp);
           }
-        } else {
-          reject(resp);
-        }
-      });
+        })
+        .catch(res => {
+          loading && (loading.style.display = "none");
+        });
     });
   }
 }

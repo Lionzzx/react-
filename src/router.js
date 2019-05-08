@@ -14,9 +14,16 @@ import Gallery from "./pages/ui/gallery";
 import Carousel from "./pages/ui/carousel";
 import LoginForm from "./pages/form/login";
 import Register from "./pages/form/register";
+import Bar from "./pages/echarts/bar";
+import Pie from "./pages/echarts/pie";
+import Line from "./pages/echarts/line";
+import Rich from "./pages/rich";
+import City from "./pages/city";
+import Order from "./pages/order";
 
 
 import BasicTable from "./pages/table/basicTable";
+import HighTable from "./pages/table/highTable";
 export default class Home extends React.Component {
   render() {
     return (
@@ -39,6 +46,13 @@ export default class Home extends React.Component {
                   <Route path="/admin/form/login" component={LoginForm} />
                   <Route path="/admin/form/reg" component={Register} />
                   <Route path="/admin/table/basic" component={BasicTable} />
+                  <Route path="/admin/table/high" component={HighTable} />
+                  <Route path="/admin/charts/bar" component={Bar} />
+                  <Route path="/admin/charts/pie" component={Pie} />
+                  <Route path="/admin/charts/line" component={Line} />
+                  <Route path="/admin/rich" component={Rich} />
+                  <Route path="/admin/city" component={City} />
+                  <Route path="/admin/order" component={Order} />
                   <Route path="/order/detail" component={Login} />
                   <Route component={Nomatch} />
                 </Switch>
